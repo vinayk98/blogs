@@ -32,7 +32,54 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.blogs-container {
+  width: 80%;
+  max-width: 900px;
+  margin: 30px auto;
+  text-align: left;
+}
+
+.blogs-container>div {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.blogs-container h2 {
+  margin-top: 0;
+}
+
+.blogs-container p {
+  margin: 10px 0;
+}
+
+.create-button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.create-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.create-button:active {
+  transform: translateY(0);
 }

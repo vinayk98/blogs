@@ -67,10 +67,6 @@ function App() {
     // We will connect this to POST/PUT API next
   };
 
-  const handleDelete = (id) => {
-    console.log('Delete:', id);
-  };
-
   return (
     <div className="App">
       <h1>StoryStack</h1>

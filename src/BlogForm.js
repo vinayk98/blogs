@@ -35,7 +35,7 @@ function BlogForm({ blog, onSubmit, onCancel, fetchBlogs }) {
                 imageFormData.append('image', image);
 
                 const imageResponse = await fetch(
-                    'http://localhost:8000/blog/image',
+                    'https://fastapi-blogs-2o2l.onrender.com/blog/image',
                     {
                         method: 'POST',
                         body: imageFormData,
@@ -68,7 +68,7 @@ function BlogForm({ blog, onSubmit, onCancel, fetchBlogs }) {
             // EDIT
             if (blog) {
                 response = await fetch(
-                    `http://localhost:8000/blog/update/${blog.id}`,
+                    `https://fastapi-blogs-2o2l.onrender.com/blog/update/${blog.id}`,
                     {
                         method: 'PUT',
                         headers: {
@@ -82,7 +82,7 @@ function BlogForm({ blog, onSubmit, onCancel, fetchBlogs }) {
             // CREATE
             else {
                 response = await fetch(
-                    'http://localhost:8000/blog/new',
+                    'https://fastapi-blogs-2o2l.onrender.com/blog/new',
                     {
                         method: 'POST',
                         headers: {
@@ -151,7 +151,7 @@ function BlogForm({ blog, onSubmit, onCancel, fetchBlogs }) {
                     />
                 </div>
 
-                <div className="form-group">
+                {/* <div className="form-group">
                     <label>Image</label>
 
                     <input
@@ -159,7 +159,7 @@ function BlogForm({ blog, onSubmit, onCancel, fetchBlogs }) {
                         accept="image/*"
                         onChange={(e) => setImage(e.target.files[0])}
                     />
-                </div>
+                </div> */}
 
                 <div className="form-actions">
                     <button type="submit">

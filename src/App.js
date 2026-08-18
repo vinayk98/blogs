@@ -9,7 +9,7 @@ function App() {
 
 
   const fetchBlogs = () => {
-    fetch('http://localhost:8000/blog/all')
+    fetch('https://fastapi-blogs-2o2l.onrender.com/blog/all')
       .then((response) => response.json())
       .then((data) => {
         setBlogs(data);
@@ -20,7 +20,7 @@ function App() {
   };
 
   const handleDeleteBlog = (id) => {
-    fetch(`http://localhost:8000/blog/${id}`, {
+    fetch(`https://fastapi-blogs-2o2l.onrender.com/blog/${id}`, {
       method: 'DELETE',
     })
       .then((response) => response.json())
@@ -91,15 +91,22 @@ function App() {
       )}
 
       <div className="blogs-container">
-        {blogs?.map((blog) => (
-          <BlogCard
-            key={blog.id}
-            blog={blog}
-            onEdit={handleEdit}
-            onDelete={handleDeleteBlog}
-            formatDate={formatDate}
-          />
-        ))}
+        {blogs && blogs.length > 0 ? (
+          blogs.map((blog) => (
+            <BlogCard
+              key={blog?.id}
+              blog={blog}
+              onEdit={handleEdit}
+              onDelete={handleDeleteBlog}
+              formatDate={formatDate}
+            />
+          ))
+        ) : (
+          <div className="no-blogs">
+            <h2>No Blogs Found</h2>
+            <p>There are no blogs available right now.</p>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -1,18 +1,8 @@
 import './BlogCard.css';
 
 function BlogCard({ blog, onDelete, onEdit, formatDate }) {
-    const BASE_URL = 'http://localhost:8000/';
-
     return (
         <div className="blog-card">
-            {blog?.image_url && (
-                <img
-                    className="post-image"
-                    src={`${BASE_URL}${blog.image_url} `}
-                    alt={blog.title}
-                />
-            )}
-
             <h2>{blog.title}</h2>
 
             <p>{blog.content}</p>

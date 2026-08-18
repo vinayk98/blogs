@@ -52,3 +52,20 @@
         height: 200px;
     }
 }
+
+.no-blogs {
+    width: 100%;
+    padding: 80px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.no-blogs h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.no-blogs p {
+    color: #777;
+    margin-bottom: 20px;
+}
